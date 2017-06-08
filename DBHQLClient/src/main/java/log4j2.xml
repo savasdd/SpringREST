@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="warn" name="MyApp" packages="">
+	<Appenders>
+
+		<File name="RFile" fileName="/home/masallah/JavaEE/log/springrs_hibernate_log">
+			<PatternLayout
+				pattern="%d{yyyy-mm-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+
+
+		<Console name="Console" target="SYSTEM_OUT" ignoreExceptions="false">
+			<PatternLayout pattern="%d{yyyy-mm-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+
+
+	</Appenders>
+	
+	 <loggers>     
+    <root level="debug">
+      <appender-ref ref="Console" level="info"/>
+       <appender-ref ref="RFile" level="info"/>
+    </root>    
+  </loggers>
+</Configuration>

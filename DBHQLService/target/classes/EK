@@ -1,0 +1,20 @@
+
+
+
+		 factory.open();
+		 factory.begin();
+		 Query query = factory.manager.createQuery("UPDATE User u SET u.role =
+		 :role, " + "u.country= :country, "
+		 + "u.isValid= :isValid, " + "u.password= :password, " + "u.eMail=
+		 :eMail, " + "u.userName= :userName "
+		 + "WHERE u.userId= :id");
+		 query.setParameter("role", user.getRole());
+		 query.setParameter("country", user.getCountry());
+		 query.setParameter("isValid", user.isValid());
+		 query.setParameter("password", user.getPassword());
+		 query.setParameter("eMail", user.geteMail());
+		 query.setParameter("userName", user.getUserName());
+		 query.setParameter("id", user.getUserId());
+		 query.executeUpdate();
+		 factory.commit();
+		 factory.close();

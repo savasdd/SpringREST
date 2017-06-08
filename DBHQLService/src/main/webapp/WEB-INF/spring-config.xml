@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd  
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd  
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+
+	<context:component-scan base-package="com.server.controller" />
+	<mvc:annotation-driven />
+
+
+	<bean id="userDao" class="com.server.dao.user.UserDao"></bean>
+	<bean id="userServices" class="com.server.services.user.UserServices"></bean>
+
+	<bean id="documentDao" class="com.server.dao.document.DocumentDao"></bean>
+	<bean id="documentServices" class="com.server.services.document.DocumentServices"></bean>
+
+	<bean id="locationDao" class="com.server.dao.location.LocationDao"></bean>
+	<bean id="locationServices" class="com.server.services.location.LocationServices"></bean>
+
+	<bean id="phraseDao" class="com.server.dao.phrase.PhraseDao"></bean>
+	<bean id="phraseServices" class="com.server.services.phrase.PhraseServices"></bean>
+
+	<bean id="linkDao" class="com.server.dao.link.LinkDao"></bean>
+	<bean id="linkServices" class="com.server.services.link.LinkServices"></bean>
+
+	<bean id="scopeDao" class="com.server.dao.scope.ScopeDao"></bean>
+	<bean id="scopeServices" class="com.server.services.scope.ScopeServices"></bean>
+
+	<bean id="factory" class="com.server.session.JpaEntityManagerFactory"></bean>
+
+
+</beans>
