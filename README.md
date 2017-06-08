@@ -1,0 +1,17 @@
+## Spring REST Öğrenmek ve Client Tarafından Gönderilen Veriyi Server Tarafında Hibernate Kullanarak MYSQL Veritabanına Kaydetmek
+- Jersey Project
+- Log4j
+- Spring-orm
+- Spring-jdbc
+- Spring-web
+- Gson
+- Jackson-mapper-asl
+- Hibernate-EntityManager ve Hibernate-Core Kütüphaneleri
+- HTTP Metods
+- MYSQL Veritabanı
+- Hibernate
+- Spring
+- MVC
+- Web Server Tomcat
+- Eclipse IDE
+- Java Programlama Dili  
